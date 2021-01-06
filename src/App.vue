@@ -1,32 +1,22 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+  <!--应用只有一个页面 index.html App.vue 这里面的内容 就是显示在index。html当中的这里面写啥 index里面就展示啥
+  表示不确定显示的内容
+
+  -->
+  <div class="app-box">
     <router-view/>
   </div>
 </template>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+//清楚所有的内外边距
+* {
+  margin: 0;
+  padding: 0;
+}
+html,body,.app-box{
+  width: 100%;
+  height: 100%;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
