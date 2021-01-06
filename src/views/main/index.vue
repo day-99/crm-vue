@@ -8,9 +8,6 @@
           <img src="../../assets/suolong.jpg" alt=""/>
           <span>crm后台管理系统</span>
         </div>
-
-
-
         <el-scrollbar class="scrollerbar">
         <el-menu
             default-active="1"
@@ -41,132 +38,10 @@
               <span slot="title">商品管理</span>
             </el-menu-item>
           </el-submenu>
-
           <el-menu-item index="3">
             <i class="el-icon-menu"></i>
             <span slot="title">运营商管理</span>
           </el-menu-item>
-
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
-          <!--         可以展开的导航-->
-          <el-submenu index="2">
-            <template slot="title">
-              <i class="el-icon-location"></i>
-              <span>商品相关</span>
-            </template>
-            <el-menu-item index="2-1">
-              <i class="el-icon-menu"></i>
-              <span slot="title">品牌管理</span>
-            </el-menu-item>
-
-            <el-menu-item index="2-2">
-              <i class="el-icon-menu"></i>
-              <span slot="title">分类管理</span>
-            </el-menu-item>
-            <el-menu-item index="2-3">
-              <i class="el-icon-menu"></i>
-              <span slot="title">商品管理</span>
-            </el-menu-item>
-          </el-submenu>
 
         </el-menu>
 
@@ -175,7 +50,14 @@
 
       <el-container>
         <el-header>Header</el-header>
-        <el-main>Main</el-main>
+
+<!--       中间-->
+        <el-main>
+          <div class="main-body">
+        <router-view/>
+          </div>
+
+        </el-main>
       </el-container>
     </el-container>
   </div>
@@ -236,6 +118,8 @@ export default {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
+  padding: 0;
+  overflow: hidden;
 }
 
 .el-container {
@@ -244,6 +128,13 @@ export default {
 
 .main-box {
   height: 100%;
+  //中间样式
+  .main-body{
+    background-color: #fff;
+    height: 100%;
+    margin: 10px 0px 0px 10px;
+    padding: 20px 0px 0px 20px;
+  }
 }
 
 </style>
